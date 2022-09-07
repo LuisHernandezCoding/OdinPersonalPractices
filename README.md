@@ -8,4 +8,9 @@ on each practice i will first do it as it came on the curriculum
 and after certain time, i will "improvise" 
 so it will end better looking (front end) or cleaner code (back end)
 
-Maybe i will make a separated branch for improvisation but only if it gets necesary
+Maybe i will make a separated branch for improvisation but only if it gets necessary
+
+
+--------------
+
+So in a new assignment i have to make a new repository so i will only put here what is not indicated to have its own repository
