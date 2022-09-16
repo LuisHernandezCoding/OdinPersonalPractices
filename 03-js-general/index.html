@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testing</title>
+</head>
+<body>
+    <h1>testing proposes</h1>
+    <p>im a paragraph</p>
+    <script>
+      console.log(23 + 97)
+      console.log("1" + "2" + "3" + "5" + "8" + "13")
+      console.log((4 + 6 + 9) / 77)
+
+      let a = 10
+      console.log(a)
+      9 * a
+      let b = 7 * a
+      console.log(b)
+
+      const MAX = 57
+      let actual = MAX - 13
+      let percentage = actual / MAX
+      console.log(percentage * 100)
+
+      /*
+      let login = prompt("Enter your login" , "")
+
+      let message = (login == 'Employee') ? 'Hello' : 
+      (login == 'Director') ? 'Greetings' : 
+      (login == '') ? 'No Login' : 'Try Again';
+
+      console.log(message);
+      */
+
+      // Set the current day of the week to a variable, with 0 being Sunday and 6 being Saturday
+      const day = new Date().getDay();
+
+      switch (day) {
+        case 0:
+          console.log("It's Sunday, time to relax!");
+          break;
+        case 1:
+          console.log("Happy Monday!");
+          break;
+        case 2:
+          console.log("It's Tuesday. You got this!");
+          break;
+        case 3:
+          console.log("Hump day already!");
+          break;
+        case 4:
+          console.log("Just one more day 'til the weekend!");
+          break;
+        case 5:
+          console.log("Happy Friday!");
+          break;
+        case 6:
+          console.log("Have a wonderful Saturday!");
+          break;
+        default:
+          console.log("Something went horribly wrong...");
+      }
+      function checkAge(age) {
+        return (age > 18) ? true : confirm('Did parents allow you?');
+      }
+      console.log(checkAge(19) ? 'Age Confirmed' : 'Age Denied')
+
+      function pow(x, n){
+        return x ** n;
+      }
+      console.log(pow(3, 2) === 9)
+      console.log(pow(3, 3) === 27)
+      console.log(pow(1, 100) === 1)
+      console.log(pow(4, 3))
+
+      let string = "capitA"
+
+      let add7 = (n) => n +7
+      let multiply = (a, b) => a * b
+      let capitalize = (s) => s.charAt(0).toUpperCase() + s.slice(1).toLowerCase();  
+      let lastLetter = (s) => s.charAt(s.length - 1)
+
+      console.log("add7(5) = " + add7(5))
+      console.log("multiply(5, 7) = " + multiply(5, 7))
+      console.log("capitalize(string) = " + capitalize(string))
+      console.log("lastLetter(string) = " + lastLetter(string))
+    </script>
+</body>
+</html>
