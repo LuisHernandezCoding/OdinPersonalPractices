@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Object-oriented JavaScript example</title>
+    <style>
+        p {
+          color: purple;
+          margin: 0.5em 0;
+        }
+  
+        * {
+          box-sizing: border-box;
+        }
+      </style>
+  </head>
+
+  <body>
+    <p>This example requires you to enter commands in your browser's JavaScript console (see <a href="https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools">What are browser developer tools</a> for more information).</p>
+
+    <section class="preview">
+
+
+
+    </section>
+  </body>
+
+    <script>
+        const person = {
+            name: {
+                first: 'Bob',
+                last: 'Smith',
+            },
+            age: 32,
+            bio() {
+                console.log(`${this.name.first} ${this.name.last} is ${this.age} years old.`);
+            },
+            introduceSelf() {
+                console.log(`Hi! I'm ${this.name.first}.`);
+            }
+        };
+        const myDataName = 'height';
+        const myDataValue = '1.75m';
+        person[myDataName] = myDataValue;
+        const person1 = {
+            name: 'Chris',
+            introduceSelf() {
+                console.log(`Hi! I'm ${this.name}.`);
+            }
+        }
+        const person2 = {
+            name: 'Deepti',
+            introduceSelf() {
+                console.log(`Hi! I'm ${this.name}.`);
+            }
+        }
+
+        function Person(name) {
+            this.name = name;
+            this.introduceSelf = function() {
+                console.log(`Hi! I'm ${this.name}.`)
+                const myNotification = new Notification('Hello!');
+            }
+        }
+        const salva = new Person('Salva')
+        salva.introduceSelf()
+        
+        function Cat(name, breed, color){
+            this.name = name
+            this.breed = breed
+            this.color = color
+            this.greeting = function() {
+                console.log('Hello, said ' + this.name + ' the ' + this.breed + '.');
+            }
+        }
+        const bertie = new Cat('Bertie', 'Cymric', 'black')
+        const mossy = new Cat('Mossy', 'Mime', 'white')
+        // Put your code here
+        bertie.greeting()
+        mossy.greeting()
+
+
+        catName = mossy.name
+        // Don't edit the code below here
+
+        const section = document.querySelector('section');
+
+        let para1 = document.createElement('p');
+        let para2 = document.createElement('p');
+
+        para1.textContent = `The cat's name is ${ mossy.name }.`;
+        para2.textContent = `The cat's color is ${ mossy.color }.`;
+
+        section.appendChild(para1);
+        section.appendChild(para2);
+
+        // BASICS 2:
+
+        let bandInfo;
+        // Add your code here
+        const band = {
+            name : 'AK Lara',
+            nationality : 'Mexican',
+            genre : 'Rap/Hip-Hop',
+            members : 2,
+            formed : '2020',
+            split : false,
+            albums : [ {
+                name : 'Comienzos',
+                released : '2023',
+            },{
+                name : 'Mi Vida',
+                released : '2023',
+            },]
+        }
+        bandInfo = band.name + ' Its a ' + band.nationality + ' musician, who makes ' +
+        band.genre + ', the band has ' + band.members + ' members. Its formed on ' +
+        band.formed + ' and the band ' + ((!band.split) ? 'its still together.' : ('splitted on ' + band.split)) +
+        ' The band has ' + band.albums.length + ' albums, witch are: "' + band.albums[0].name +
+        '" released on ' + band.albums[0].released + ' and the album: "' + band.albums[1].name +
+        '" released on ' + band.albums[1].released + '.'
+
+
+        // Don't edit the code below here!
+        let para3 = document.createElement('p');
+        para3.textContent = bandInfo;
+        section.appendChild(para3);
+        
+    </script>
+</html>

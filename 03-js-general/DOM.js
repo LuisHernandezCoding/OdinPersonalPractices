@@ -29,11 +29,31 @@ pinkDiv.appendChild(pinkDivTitle)
 pinkDiv.appendChild(pinkDivParagraph)
 container.appendChild(pinkDiv)
 
-const btn2 = document.querySelector('#btn2');
-btn2.onclick = () => alert("Hello World");
+const btn2 = document.querySelector('#btn2')
+btn2.onclick = () => alert("Hello World")
 
-const btn3 = document.querySelector('#btn3');
-btn3.addEventListener('click', function (e) {
-  alert("Hello World");
-  console.log(e);
+const btn3 = document.querySelector('#btn3')
+btn3.addEventListener('click', function (event) {
+  alert("Hello World")
+  console.log(event)
+  e.target.style.background = 'blue'
+})
+
+const buttons2 = document.querySelectorAll('#container2 button')
+buttons2.forEach((button) => {
+  button.addEventListener('click', function (event) {
+    alert(button.id);
+    console.log(event)
+    console.log('you pressed a button with the id: ' + button.id + '!')
+  });
 });
+
+
+const buttons3 = document.querySelectorAll('#container3 button')
+buttons3.forEach((button) => {
+  button.addEventListener('dblclick', function (event) {
+    alert(button.id);
+    console.log(event)
+    console.log('you double pressed a button with the id: ' + button.id + '!')
+  })
+})
